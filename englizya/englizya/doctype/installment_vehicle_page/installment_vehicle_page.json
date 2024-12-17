@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-27 01:45:09.492432",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "share",
+  "advanced",
+  "installment",
+  "column_break_scqh",
+  "gps",
+  "garage",
+  "cash"
+ ],
+ "fields": [
+  {
+   "fieldname": "share",
+   "fieldtype": "Link",
+   "label": "Share ",
+   "options": "Item"
+  },
+  {
+   "fieldname": "gps",
+   "fieldtype": "Link",
+   "label": "Gps",
+   "options": "Item"
+  },
+  {
+   "fieldname": "garage",
+   "fieldtype": "Link",
+   "label": "Garage",
+   "options": "Item"
+  },
+  {
+   "fieldname": "installment",
+   "fieldtype": "Link",
+   "label": "Installment",
+   "options": "Item"
+  },
+  {
+   "fieldname": "advanced",
+   "fieldtype": "Link",
+   "label": "Advanced",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_scqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash",
+   "fieldtype": "Link",
+   "label": "Cash",
+   "options": "Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-27 02:01:00.979243",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Installment Vehicle Page",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

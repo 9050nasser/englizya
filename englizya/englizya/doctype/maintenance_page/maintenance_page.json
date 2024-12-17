@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-25 21:45:29.964940",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "name_of_the_maintenance_technician",
+  "maintenance_type",
+  "maintenance_date",
+  "column_break_ugbz",
+  "maintenance_calculation",
+  "maintenance_cycle_period",
+  "unit",
+  "column_break_kjwd",
+  "vehicle",
+  "chassis",
+  "license_plate_no",
+  "model_no",
+  "column_break_qgxk",
+  "next_maintenance_date",
+  "location",
+  "quantity_used",
+  "item_code",
+  "section_break_jxgx",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "maintenance_date",
+   "fieldtype": "Date",
+   "label": "Maintenance Date"
+  },
+  {
+   "fieldname": "name_of_the_maintenance_technician",
+   "fieldtype": "Link",
+   "label": "Name Of The Maintenance Technician",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Link",
+   "label": "Maintenance Type",
+   "options": "Maintenance Type"
+  },
+  {
+   "fieldname": "maintenance_calculation",
+   "fieldtype": "Select",
+   "label": "Maintenance Calculation",
+   "options": "\n\u0627\u062e\u0631\u0649\n\u0628\u0627\u0644\u0627\u064a\u0627\u0645\n\u0628\u0627\u0644\u0643\u064a\u0644\u0648\u0645\u062a\u0631"
+  },
+  {
+   "fieldname": "maintenance_cycle_period",
+   "fieldtype": "Int",
+   "label": "Maintenance Cycle Period"
+  },
+  {
+   "fieldname": "quantity_used",
+   "fieldtype": "Int",
+   "label": "Quantity Used"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.chassis_no",
+   "fieldname": "chassis",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "license_plate_no",
+   "fieldtype": "Data",
+   "label": "License Plate No"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.model",
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "label": "Model No"
+  },
+  {
+   "fieldname": "column_break_ugbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kjwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qgxk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jxgx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-25 22:16:44.931638",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Maintenance Page",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

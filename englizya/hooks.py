@@ -43,7 +43,12 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Payment Entry" : "public/js/pr.js",
+	"Customer" : "public/js/customer.js",
+	"Employee" : "public/js/employee.js",
+	"Vehicle" : "public/js/vehicle.js",
+              }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -137,34 +142,45 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Serial and Batch Bundle": {
+		"before_insert": "englizya.api.add_serials",
+        
+	},
+    "Purchase Receipt": {
+      "on_submit": "englizya.api.generate_tickets"  
+	},
+    "Salary Slip": {
+      "before_insert": ["englizya.events.calculate_salary" ,
+                        "englizya.events.before_insert"
+                         ],
+		"on_submit": ["englizya.events.on_submit" ,
+                         ],
+	},
+    "Attendance":{
+		"on_submit": "englizya.api.appliy_salary"  
+	},
+    "Vehicle":{
+		"after_insert": ["englizya.triggers.vehicle.vehicle.after_insert",  "englizya.events.make_asset_item"] ,
+		"validate": "englizya.triggers.vehicle.vehicle.validate"  ,
+	},
+    "Task":{
+		"validate": "englizya.triggers.task.task.validate"  
+	},
+    "Stock Entry":{
+		"on_submit": "englizya.triggers.stock_entry.stock_entry.on_submit"  
+	},
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"englizya.tasks.all"
-# 	],
-# 	"daily": [
-# 		"englizya.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"englizya.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"englizya.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"englizya.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"englizya.tasks.update_maintaince"
+	],
+
+}
 
 # Testing
 # -------
@@ -174,9 +190,9 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "englizya.event.get_events"
-# }
+override_whitelisted_methods = {
+	"erpnext.accounts.doctype.payment_entry.payment_entry.get_outstanding_reference_documents" : "englizya.overrides.get_outstanding_reference_documents"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -241,4 +257,28 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+fixtures = [
+    {"dt": "Custom Field", "filters": [
+        [
+            "module",
+            "=",
+            "Englizya"
+        ]
+    ]},
+	{"dt": "Print Format", "filters": [
+        [
+            "module",
+            "=",
+            "Englizya"
+        ]
+    ]},
+    {"dt": "Property Setter", "filters": [
+        [
+            "module",
+            "=",
+            "Englizya"
+			
+        ]
+    ]},
 
+]

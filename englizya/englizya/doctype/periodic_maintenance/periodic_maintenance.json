@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{type_of_maintenance}-{vehicle}",
+ "creation": "2024-11-11 00:56:21.229166",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hmyy",
+  "amended_from",
+  "section_break_evgt",
+  "maintenance_date",
+  "vehicle",
+  "maintenance_status",
+  "column_break_hyzv",
+  "type_of_maintenance",
+  "column_break_qrwj",
+  "section_break_yxfl",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hmyy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Periodic Maintenance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_evgt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "maintenance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Maintenance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_maintenance",
+   "fieldtype": "Link",
+   "label": "Maintenance Task",
+   "options": "Maintenance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hyzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qrwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yxfl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "maintenance_status",
+   "fieldtype": "Select",
+   "label": "Maintenance Status",
+   "options": "Planned\nCompleted\nCancelled\nOverdue",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-13 04:04:15.784843",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Periodic Maintenance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

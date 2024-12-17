@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{manifest}",
+ "creation": "2024-11-05 15:25:01.962029",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xith",
+  "amended_from",
+  "section_break_fblf",
+  "manifest",
+  "company",
+  "date",
+  "garage",
+  "column_break_fhpn",
+  "car",
+  "driver",
+  "km",
+  "column_break_mqwe",
+  "exit",
+  "odometer_start",
+  "enter",
+  "odometer_last"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xith",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Enter And Exit Car",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_fblf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "manifest.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "manifest.garage",
+   "fieldname": "garage",
+   "fieldtype": "Data",
+   "label": "Garage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fhpn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "manifest.vehicle",
+   "fieldname": "car",
+   "fieldtype": "Data",
+   "label": "Car",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "manifest.driver",
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fieldname": "column_break_mqwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enter",
+   "fieldtype": "Datetime",
+   "label": "Enter"
+  },
+  {
+   "fieldname": "exit",
+   "fieldtype": "Datetime",
+   "label": "Exit"
+  },
+  {
+   "depends_on": "odometer_last",
+   "fieldname": "km",
+   "fieldtype": "Int",
+   "label": "K.M",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.exit",
+   "fieldname": "odometer_start",
+   "fieldtype": "Int",
+   "label": "Odometer Start"
+  },
+  {
+   "depends_on": "eval:doc.enter",
+   "fieldname": "odometer_last",
+   "fieldtype": "Int",
+   "label": "Odometer Last"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-10 01:54:03.052518",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Enter And Exit Car",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "INT-.####",
+ "creation": "2024-12-15 09:15:06.712287",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_symv",
+  "area",
+  "insurance_office",
+  "establishment_address",
+  "legal_form_of_establishment",
+  "amended_from",
+  "column_break_owym",
+  "company",
+  "activity_start_date",
+  "establishment_number",
+  "owner_or_responsible_manager",
+  "section_break_uqqt",
+  "table_ngcw"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_symv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "insurance subscription",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "insurance_office",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurance Office",
+   "options": "Social Insurance Office",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner_or_responsible_manager",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Or Responsible Manager"
+  },
+  {
+   "fieldname": "legal_form_of_establishment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Legal form of Establishment"
+  },
+  {
+   "fieldname": "column_break_owym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.date_of_establishment",
+   "fieldname": "activity_start_date",
+   "fieldtype": "Data",
+   "label": "Activity Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "establishment_number",
+   "fieldtype": "Int",
+   "label": "Establishment Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uqqt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_ngcw",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "insurance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "establishment_address",
+   "fieldtype": "Link",
+   "label": "Establishment Address",
+   "options": "Territory",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-16 11:51:42.475634",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "insurance subscription",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

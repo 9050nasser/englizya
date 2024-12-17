@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-14 20:33:06.742335",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "book",
+  "serial_from",
+  "serial_to",
+  "category",
+  "refund_date",
+  "refund_serial"
+ ],
+ "fields": [
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "label": "Book",
+   "options": "Ticket Book"
+  },
+  {
+   "fetch_from": "book.start_serial_no",
+   "fieldname": "serial_from",
+   "fieldtype": "Data",
+   "label": "Serial From"
+  },
+  {
+   "fetch_from": "book.end_serial_no",
+   "fieldname": "serial_to",
+   "fieldtype": "Data",
+   "label": "Serial To"
+  },
+  {
+   "fetch_from": "book.category",
+   "fieldname": "category",
+   "fieldtype": "Currency",
+   "label": "Category"
+  },
+  {
+   "default": "Today",
+   "fieldname": "refund_date",
+   "fieldtype": "Date",
+   "label": "Refund Date"
+  },
+  {
+   "fieldname": "refund_serial",
+   "fieldtype": "Int",
+   "label": "Refund Serial"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-14 20:37:20.521799",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Book Assignment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

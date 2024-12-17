@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-02 16:35:36.760473",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "letter",
+  "from",
+  "ticket_return_no",
+  "total_revenue",
+  "total_return_ticket",
+  "column_break_urpc",
+  "category",
+  "to",
+  "return_amount",
+  "registry_code",
+  "net_total",
+  "sold_tickets_count",
+  "ticket_book",
+  "item",
+  "exists_or_not",
+  "serial_no"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "label": "From"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ticket_return_no",
+   "fieldtype": "Int",
+   "label": "Ticket Return No."
+  },
+  {
+   "fieldname": "column_break_urpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "category",
+   "fieldtype": "Currency",
+   "label": "Category",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "label": "To",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "return_amount",
+   "fieldtype": "Currency",
+   "label": "Return Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_revenue",
+   "fieldtype": "Int",
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "registry_code",
+   "fieldtype": "Data",
+   "label": "Registry Code",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "letter",
+   "fieldtype": "Link",
+   "label": "Letter",
+   "options": "Batch"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_return_ticket",
+   "fieldtype": "Int",
+   "label": "Total Return Ticket",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sold_tickets_count",
+   "fieldtype": "Int",
+   "label": "Sold Tickets Count",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "ticket_book",
+   "fieldtype": "Link",
+   "label": "Ticket Book",
+   "options": "Ticket Book",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "exists_or_not",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Exists Or Not"
+  },
+  {
+   "fetch_from": "ticket_book.item",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ticket_book.serial_no",
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "Serial No",
+   "options": "Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-16 05:13:37.589631",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Custodies",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1,
+ "track_views": 1
+}

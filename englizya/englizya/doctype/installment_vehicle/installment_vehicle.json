@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{customer}-{####}",
+ "creation": "2024-11-26 23:29:09.299377",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bjb2",
+  "column_break_bmqu",
+  "company",
+  "vehicle",
+  "model_no",
+  "license_type",
+  "column_break_bnfd",
+  "amended_from",
+  "chassis_no",
+  "license_plate_no",
+  "vehicle_code",
+  "section_break_qkkd",
+  "customer_installment",
+  "section_break_bztx",
+  "share_amount",
+  "monthly_share_amount",
+  "payments_details",
+  "section_break_mfwv",
+  "enable_gps",
+  "amount_gps",
+  "column_break_dyrv",
+  "enable_garage",
+  "amount_garage",
+  "section_break_gcad",
+  "details_gpsgarage",
+  "section_break_okfh",
+  "column_break_lwqc",
+  "start_date",
+  "late",
+  "column_break_qjbf",
+  "end_date",
+  "next_subscription",
+  "section_break_wwru",
+  "table_hasi",
+  "column_break_iekf",
+  "type_of_payment",
+  "payment_installment",
+  "advanced",
+  "number_of_advanced",
+  "number_of_months_period",
+  "number_of_installments",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bjb2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Installment Vehicle",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "enable_gps",
+   "fieldtype": "Check",
+   "label": "Enable Gps"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "enable_gps",
+   "description": "Mounthly",
+   "fieldname": "amount_gps",
+   "fieldtype": "Currency",
+   "label": "Amount Gps"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "enable_garage",
+   "fieldtype": "Check",
+   "label": "Enable Garage"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "enable_garage",
+   "description": "Mounthly",
+   "fieldname": "amount_garage",
+   "fieldtype": "Currency",
+   "label": "Amount Garage"
+  },
+  {
+   "fieldname": "column_break_bmqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_okfh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Installment\"",
+   "fieldname": "payment_installment",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Payment Installment"
+  },
+  {
+   "depends_on": "eval:doc.payment_installment&&doc.type_of_payment==\"Installment\"\r\n",
+   "fieldname": "number_of_installments",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Number of Installments ",
+   "precision": "0"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "share_amount",
+   "fieldtype": "Currency",
+   "label": "Total Share Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "precision": "0"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_lwqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wwru",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "table_hasi",
+   "fieldtype": "Table",
+   "options": "Description"
+  },
+  {
+   "fieldname": "type_of_payment",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Type Of Payment",
+   "options": "\nCash\nAdvanced\nInstallment"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Advanced\"",
+   "fieldname": "advanced",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Advanced"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "monthly_share_amount",
+   "fieldtype": "Currency",
+   "label": "Monthly Share Amount"
+  },
+  {
+   "depends_on": "eval:doc.advanced&&doc.type_of_payment==\"Advanced\"\r\n",
+   "fieldname": "number_of_advanced",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Number of Advanced",
+   "precision": "0"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Cash\"",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "\u063a\u0631\u0627\u0645\u0629 \u062a\u0623\u062e\u064a\u0631 \u062a\u062d\u062f\u062b \u0643\u0644 \u0634\u0647\u0631",
+   "fieldname": "late",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Late"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.chassis_no",
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "license_plate_no",
+   "fieldtype": "Data",
+   "label": "License Plate No"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.model",
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "label": "Model "
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.custom_license_type",
+   "fieldname": "license_type",
+   "fieldtype": "Data",
+   "label": "License Type"
+  },
+  {
+   "depends_on": "eval:doc.advanced&&doc.type_of_payment==\"Advanced\"\r\n",
+   "fieldname": "number_of_months_period",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Number of Months Period",
+   "precision": "0"
+  },
+  {
+   "fieldname": "section_break_mfwv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dyrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "vehicle",
+   "fetch_from": "vehicle.custom_vehicle_code",
+   "fieldname": "vehicle_code",
+   "fieldtype": "Data",
+   "label": "Vehicle Code"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "next_subscription",
+   "fieldtype": "Date",
+   "label": "Next Subscription"
+  },
+  {
+   "fieldname": "column_break_bnfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qkkd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_installment",
+   "fieldtype": "Table",
+   "label": "Customer Installment",
+   "options": "Customer Installment"
+  },
+  {
+   "fieldname": "column_break_iekf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "section_break_bztx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payments_details",
+   "fieldtype": "Table",
+   "label": "Payments Details",
+   "options": "Payments Details"
+  },
+  {
+   "fieldname": "section_break_gcad",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details_gpsgarage",
+   "fieldtype": "Table",
+   "label": "Details Gps/Garage",
+   "options": "Details GG"
+  },
+  {
+   "fieldname": "column_break_qjbf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "custom_installment_vehicle"
+  }
+ ],
+ "modified": "2024-12-16 09:29:02.816279",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Installment Vehicle",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

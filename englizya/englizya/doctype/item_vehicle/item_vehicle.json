@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-01 13:17:14.213159",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "spare_parts",
+  "unit",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "spare_parts",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Spare Parts",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "spare_parts.stock_uom",
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-01 13:29:53.978872",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Item Vehicle",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:route_code",
+ "creation": "2024-09-02 15:34:59.150915",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "route_code",
+  "title",
+  "supervisor",
+  "mobile",
+  "column_break_dcpf",
+  "route_name",
+  "supervisor_name",
+  "section_break_nbwp",
+  "table_vvdo"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nbwp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_vvdo",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Route Target Table"
+  },
+  {
+   "fieldname": "column_break_dcpf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route Name"
+  },
+  {
+   "fieldname": "route_code",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Route Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "link_filters": "[[\"Employee\",\"status\",\"=\",\"Active\"]]",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "supervisor.employee_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name"
+  },
+  {
+   "fetch_from": "supervisor.cell_number",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-16 13:19:30.019940",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Route",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "route_code,route_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "route_name",
+ "track_seen": 1,
+ "track_views": 1
+}

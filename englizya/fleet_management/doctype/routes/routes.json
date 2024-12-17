@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-23 14:52:17.808564",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hwzj",
+  "route_code",
+  "route_name",
+  "route_type",
+  "qty",
+  "column_break_exmw",
+  "origin",
+  "governorate",
+  "date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hwzj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Route code",
+   "options": "Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Route Name",
+   "options": "Route",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route_type",
+   "fieldtype": "Data",
+   "label": "Route Type"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_exmw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Origin",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Country"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Routes",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-23 16:11:11.599183",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Routes",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-15 00:54:37.033666",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exit",
+  "enter",
+  "hours",
+  "number_of_round",
+  "complete_the_number_of_liters"
+ ],
+ "fields": [
+  {
+   "fieldname": "exit",
+   "fieldtype": "Datetime",
+   "label": "Exit"
+  },
+  {
+   "fieldname": "enter",
+   "fieldtype": "Datetime",
+   "label": "Enter"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Int",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "number_of_round",
+   "fieldtype": "Int",
+   "label": "Number Of Round"
+  },
+  {
+   "fieldname": "complete_the_number_of_liters",
+   "fieldtype": "Int",
+   "label": "Complete the number of liters"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-15 01:05:36.711390",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Enter And Exit Tble",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

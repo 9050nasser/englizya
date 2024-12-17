@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{vehicle}-{YY}-{MM}-{DD}",
+ "creation": "2024-11-12 11:28:03.898347",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vsju",
+  "amended_from",
+  "company",
+  "maintenance_type",
+  "status",
+  "column_break_grkz",
+  "vehicle",
+  "location",
+  "executed",
+  "column_break_ialk",
+  "license_plate",
+  "chassis_no",
+  "model",
+  "garage",
+  "vehicle_code",
+  "section_break_teyh",
+  "table_qwhg",
+  "section_break_ejlh",
+  "item_vehicle",
+  "section_break_bptd",
+  "notes",
+  "tab_break_41eq"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vsju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_grkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.custom_garage",
+   "fieldname": "garage",
+   "fieldtype": "Link",
+   "label": "Garage",
+   "options": "Garage"
+  },
+  {
+   "fieldname": "section_break_bptd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "label": "License Plate"
+  },
+  {
+   "fetch_from": "vehicle.chassis_no",
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "fetch_from": "vehicle.model",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "section_break_teyh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_qwhg",
+   "fieldtype": "Table",
+   "options": "Maintenance Table"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Link",
+   "label": "Maintenance Type",
+   "options": "Maintenance Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "vehicle.custom_vehicle_code",
+   "fieldname": "vehicle_code",
+   "fieldtype": "Data",
+   "label": "Vehicle Code"
+  },
+  {
+   "fieldname": "column_break_ialk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "\nNew\nCompleted"
+  },
+  {
+   "default": "0",
+   "fieldname": "executed",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Executed"
+  },
+  {
+   "fieldname": "section_break_ejlh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_vehicle",
+   "fieldtype": "Table",
+   "label": "Item Vehicle",
+   "options": "Item Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.socstatus==1",
+   "fieldname": "tab_break_41eq",
+   "fieldtype": "Tab Break",
+   "label": "Connection",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_maintenance"
+  }
+ ],
+ "modified": "2024-12-13 16:14:19.269765",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Maintenance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

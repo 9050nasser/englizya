@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "format:{batch_code}-{book_code}",
+ "creation": "2024-10-09 23:34:39.121897",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "book_code",
+  "batch_code",
+  "start_serial_no",
+  "end_serial_no",
+  "category",
+  "returned_ticket",
+  "status",
+  "status_book",
+  "column_break_zbyr",
+  "driver",
+  "manifest",
+  "serial_no",
+  "company",
+  "warehouse"
+ ],
+ "fields": [
+  {
+   "fieldname": "book_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Code"
+  },
+  {
+   "fieldname": "batch_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch Code"
+  },
+  {
+   "fieldname": "start_serial_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Start Serial No"
+  },
+  {
+   "fieldname": "end_serial_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "End Serial No"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Category",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "returned_ticket",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Returned Ticket",
+   "non_negative": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nAvailable\nPartly Sold\nSold\nBooked"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status_book",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Book",
+   "options": "Open\nClose"
+  },
+  {
+   "fieldname": "column_break_zbyr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "mnifest.driver",
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Driver",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "Serial No",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-16 05:09:24.702509",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Ticket Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

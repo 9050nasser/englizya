@@ -1,0 +1,464 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MN-{#####}",
+ "creation": "2024-09-02 15:19:31.403361",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "masters_tab",
+  "details_section",
+  "company",
+  "garage",
+  "garage_account",
+  "manifest_type",
+  "vehicle",
+  "model",
+  "vehicle_company",
+  "stock_entry",
+  "column_break_uxne",
+  "date",
+  "driver",
+  "license_plate",
+  "status",
+  "include_pos",
+  "column_break_gslj",
+  "shift",
+  "route",
+  "make",
+  "column_break_ernv",
+  "total_revenue",
+  "daily_driver_amount",
+  "mouthly_driver_amount",
+  "elite_target_amount",
+  "maintain_same_bus_bonus",
+  "column_break_evcx",
+  "total_expense",
+  "daily_salary",
+  "sold_tickets_count",
+  "over_target_amount",
+  "column_break_esmc",
+  "net_total",
+  "section_break_nzzd",
+  "table_fozg",
+  "old_manifest",
+  "new_manifest",
+  "tab_2_tab",
+  "expenses_section",
+  "details",
+  "tab_4_tab",
+  "disbursement_of_subscription_registry_section",
+  "table_uzrg",
+  "tab_5_tab",
+  "subscription_tickets_section",
+  "table_ylzc",
+  "tab_6_tab",
+  "monitor_section",
+  "table_wsgh",
+  "tab_7_tab",
+  "inspection_section",
+  "table_zabv",
+  "amended_from",
+  "deduction_reason_tab",
+  "deduction_reason",
+  "enter_and_exit_tble_tab",
+  "table_vsex"
+ ],
+ "fields": [
+  {
+   "fieldname": "masters_tab",
+   "fieldtype": "Tab Break",
+   "label": "Masters"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "manifest_type",
+   "fieldtype": "Select",
+   "label": "Manifest Type",
+   "options": "Internal\nExternal"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "fetch_from": "vehicle.model",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uxne",
+   "fieldtype": "Column Break",
+   "options": "\n\u0648\u0631\u062f\u064a\u0651\u0629\n\u0648\u0631\u062f\u064a\u0651\u0629 + \u062f\u0648\u0631\n\u0637\u0648\u064a\u0644\u0629\n\u0645\u0633\u0627\u0626\u064a\u0629\n\u064a\u0648\u0645 \u0648 \u064a\u0648\u0645"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "label": "License Plate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gslj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fetch_from": "vehicle.route",
+   "fetch_if_empty": 1,
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Route"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Expenses"
+  },
+  {
+   "fetch_from": "vehicle.make",
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_evcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_expense",
+   "fieldtype": "Currency",
+   "label": "Total Expense",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_esmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Driver",
+   "link_filters": "[[\"Employee\",\"custom_is_driver\",\"=\",1]]",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "daily_salary",
+   "fieldtype": "Currency",
+   "label": "Daily Salary",
+   "read_only": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "include_pos",
+   "fieldtype": "Select",
+   "label": "Include POS",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Expenses Table"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tab_4_tab",
+   "fieldtype": "Tab Break",
+   "label": "Disbursement Of Subscription Registry"
+  },
+  {
+   "fieldname": "disbursement_of_subscription_registry_section",
+   "fieldtype": "Section Break",
+   "label": "Disbursement Of Subscription Registry"
+  },
+  {
+   "fieldname": "table_uzrg",
+   "fieldtype": "Table",
+   "options": "Disbursement Of Subscription"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tab_5_tab",
+   "fieldtype": "Tab Break",
+   "label": "Subscription Ticket"
+  },
+  {
+   "fieldname": "subscription_tickets_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Tickets"
+  },
+  {
+   "fieldname": "table_ylzc",
+   "fieldtype": "Table",
+   "options": "Subscription Ticket"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tab_6_tab",
+   "fieldtype": "Tab Break",
+   "label": "Monitor"
+  },
+  {
+   "fieldname": "monitor_section",
+   "fieldtype": "Section Break",
+   "label": "Monitor"
+  },
+  {
+   "fieldname": "table_wsgh",
+   "fieldtype": "Table",
+   "options": "Monitor"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tab_7_tab",
+   "fieldtype": "Tab Break",
+   "label": "Inspection"
+  },
+  {
+   "fieldname": "inspection_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection"
+  },
+  {
+   "fieldname": "table_zabv",
+   "fieldtype": "Table",
+   "options": "Inspection"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Manifest",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_nzzd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_fozg",
+   "fieldtype": "Table",
+   "options": "Custodies"
+  },
+  {
+   "fieldname": "column_break_ernv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "enter_and_exit_tble_tab",
+   "fieldtype": "Tab Break",
+   "label": "Enter And Exit Table"
+  },
+  {
+   "fieldname": "table_vsex",
+   "fieldtype": "Table",
+   "options": "Enter And Exit Tble"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "\nPending\nCalculate\nFirst Review\nComplete The First Review\nSecond Review\nComplete The Second Review"
+  },
+  {
+   "fieldname": "daily_driver_amount",
+   "fieldtype": "Currency",
+   "label": "Daily Driver Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mouthly_driver_amount",
+   "fieldtype": "Currency",
+   "label": "Mouthly Driver Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sold_tickets_count",
+   "fieldtype": "Int",
+   "label": "Sold Tickets Count",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "over_target_amount",
+   "fieldtype": "Currency",
+   "label": "Over Target Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "elite_target_amount",
+   "fieldtype": "Currency",
+   "label": "Elite Target Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_manifest",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fieldname": "new_manifest",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "New Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fieldname": "garage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Garage",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "garage.custom_treasury",
+   "fieldname": "garage_account",
+   "fieldtype": "Data",
+   "label": "Garage Account",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle",
+   "fetch_from": "vehicle.custom_company",
+   "fieldname": "vehicle_company",
+   "fieldtype": "Data",
+   "label": "Vehicle Company"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.deduction_reason",
+   "fieldname": "deduction_reason_tab",
+   "fieldtype": "Tab Break",
+   "label": "Deduction Notes"
+  },
+  {
+   "fieldname": "deduction_reason",
+   "fieldtype": "Text",
+   "label": "Deduction Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "maintain_same_bus_bonus",
+   "fieldtype": "Check",
+   "label": "Maintain Same Bus Bonus"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-09 15:18:10.339086",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Manifest",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Pending"
+  },
+  {
+   "color": "Green",
+   "title": "Calculate"
+  },
+  {
+   "color": "Yellow",
+   "title": "Complete The First Review"
+  },
+  {
+   "color": "Purple",
+   "title": "Complete The Second  Review"
+  },
+  {
+   "color": "Pink",
+   "title": "First Review"
+  },
+  {
+   "color": "Orange",
+   "title": "Second Review"
+  }
+ ]
+}

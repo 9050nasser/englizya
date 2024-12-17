@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-22 06:05:27.574005",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target_start_amount",
+  "column_break_bsoa",
+  "target_end_amount",
+  "column_break_jike",
+  "number_of_tickets",
+  "column_break_zksi",
+  "amount_on_regularity_in_work",
+  "column_break_bxsi",
+  "amount_on_regularity_on_car",
+  "section_break_ziic",
+  "shift",
+  "column_break_dgwt",
+  "daily_percentage",
+  "column_break_deqi",
+  "daily_target_amount",
+  "column_break_ttvg",
+  "bigger_than_amount",
+  "section_break_bunt",
+  "end_of_month_percentage",
+  "column_break_ixox",
+  "fixed_salary_rate",
+  "column_break_fxik",
+  "target_achieve_percentage",
+  "column_break_elvq",
+  "target_achieve_amount",
+  "column_break_ppuq",
+  "target_amount",
+  "section_break_udqd",
+  "amount_above_target_achieve",
+  "column_break_lwtg",
+  "percentage_above_target_achieve",
+  "column_break_lsrm",
+  "target_above_main_target",
+  "section_break_ozot",
+  "additional_percentage_when_achieve_daily_target",
+  "column_break_vwen",
+  "on_number_of_tickets",
+  "column_break_hdqh",
+  "or_daily_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_bsoa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "target_start_amount",
+   "fieldtype": "Int",
+   "label": "Target Start Amount"
+  },
+  {
+   "fieldname": "column_break_jike",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "target_end_amount",
+   "fieldtype": "Int",
+   "label": "Target End Amount"
+  },
+  {
+   "fieldname": "column_break_zksi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "number_of_tickets",
+   "fieldtype": "Int",
+   "label": "Number of Tickets"
+  },
+  {
+   "fieldname": "column_break_bxsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount_on_regularity_in_work",
+   "fieldtype": "Int",
+   "label": "Amount on Regularity in Work"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount_on_regularity_on_car",
+   "fieldtype": "Int",
+   "label": "Amount on Regularity on Car"
+  },
+  {
+   "fieldname": "section_break_ziic",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "column_break_dgwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "daily_percentage",
+   "fieldtype": "Percent",
+   "label": "Daily Percentage"
+  },
+  {
+   "fieldname": "column_break_deqi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "daily_target_amount",
+   "fieldtype": "Int",
+   "label": "Daily Target Amount"
+  },
+  {
+   "fieldname": "column_break_ttvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "bigger_than_amount",
+   "fieldtype": "Int",
+   "label": "Bigger Than Amount"
+  },
+  {
+   "fieldname": "section_break_bunt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_of_month_percentage",
+   "fieldtype": "Percent",
+   "label": "End of Month Percentage"
+  },
+  {
+   "fieldname": "column_break_ixox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fixed_salary_rate",
+   "fieldtype": "Int",
+   "label": "Fixed Salary Rate"
+  },
+  {
+   "fieldname": "column_break_fxik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_achieve_percentage",
+   "fieldtype": "Percent",
+   "label": "Target Achieve Percentage"
+  },
+  {
+   "fieldname": "column_break_elvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_achieve_amount",
+   "fieldtype": "Int",
+   "label": "Target Achieve Amount"
+  },
+  {
+   "fieldname": "column_break_ppuq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_amount",
+   "fieldtype": "Int",
+   "label": "Target Amount"
+  },
+  {
+   "fieldname": "section_break_udqd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_above_target_achieve",
+   "fieldtype": "Int",
+   "label": "Amount Above Target Achieve"
+  },
+  {
+   "fieldname": "column_break_lwtg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "percentage_above_target_achieve",
+   "fieldtype": "Percent",
+   "label": "Percentage Above Target Achieve"
+  },
+  {
+   "fieldname": "column_break_lsrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_above_main_target",
+   "fieldtype": "Int",
+   "label": "Target Above Main Target"
+  },
+  {
+   "fieldname": "section_break_ozot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_percentage_when_achieve_daily_target",
+   "fieldtype": "Percent",
+   "label": "Additional Percentage When Achieve Daily Target"
+  },
+  {
+   "fieldname": "column_break_vwen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "on_number_of_tickets",
+   "fieldtype": "Int",
+   "label": "On Number Of Tickets"
+  },
+  {
+   "fieldname": "column_break_hdqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "or_daily_amount",
+   "fieldtype": "Int",
+   "label": "Or Daily Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-22 06:53:33.633941",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Route Target Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

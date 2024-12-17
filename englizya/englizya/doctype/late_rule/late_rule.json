@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-06 13:26:44.081367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "absent_section",
+  "from",
+  "to",
+  "fraction"
+ ],
+ "fields": [
+  {
+   "fieldname": "absent_section",
+   "fieldtype": "Section Break",
+   "label": "Absent"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From (Minute)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To (Minute)"
+  },
+  {
+   "fieldname": "fraction",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fraction"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-07 22:00:50.194052",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Late Rule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

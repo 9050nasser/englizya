@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-25 15:06:12.581631",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shift_type",
+  "attendance_in_days",
+  "deduction_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "shift_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift Type",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "attendance_in_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Attendance In Days"
+  },
+  {
+   "fieldname": "deduction_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Deduction Percentage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-25 15:08:43.656680",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Penalty Setting Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-02 17:26:06.823177",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_category",
+  "ticket_no",
+  "title_case",
+  "column_break_foqr",
+  "registry_no",
+  "from",
+  "to",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_category",
+   "fieldtype": "Link",
+   "label": "Ticket Category",
+   "options": "Ticket Category"
+  },
+  {
+   "fieldname": "ticket_no",
+   "fieldtype": "Int",
+   "label": "Ticket No."
+  },
+  {
+   "fieldname": "title_case",
+   "fieldtype": "Data",
+   "label": "Title Case"
+  },
+  {
+   "fieldname": "column_break_foqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registry_no",
+   "fieldtype": "Int",
+   "label": "Registry No."
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "label": "To"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subscription Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-05 10:48:03.343247",
+ "modified_by": "Administrator",
+ "module": "Fleet Management",
+ "name": "Subscription Ticket",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1,
+ "track_views": 1
+}

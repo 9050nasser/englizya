@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-15 09:30:30.978826",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "insurance_number",
+  "national_id_number",
+  "date_of_joining",
+  "insurance_salary",
+  "total_salary"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee.custom_social_insurance_no",
+   "fieldname": "insurance_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance Number",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_id_number",
+   "fieldname": "national_id_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "National ID Number",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Joining",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Insurance Salary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Salary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name of the insured",
+   "options": "Employee",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-15 11:15:39.087840",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "insurance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

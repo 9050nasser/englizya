@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-13 23:47:23.271956",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_group",
+  "percent",
+  "type_of_payment",
+  "payment_installment",
+  "advanced",
+  "number_of_advanced",
+  "number_of_months_period",
+  "number_of_installments",
+  "amount",
+  "share_amount",
+  "amount_gps",
+  "amount_garage"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percent"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Cash\"",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "type_of_payment",
+   "fieldtype": "Select",
+   "label": "Type Of Payment",
+   "options": "\nCash\nAdvanced\nInstallment"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Installment\"",
+   "fieldname": "payment_installment",
+   "fieldtype": "Currency",
+   "label": "Payment Installment"
+  },
+  {
+   "depends_on": "eval:doc.type_of_payment==\"Advanced\"",
+   "fieldname": "advanced",
+   "fieldtype": "Currency",
+   "label": "Advanced"
+  },
+  {
+   "depends_on": "eval:doc.advanced&&doc.type_of_payment==\"Advanced\"",
+   "fieldname": "number_of_advanced",
+   "fieldtype": "Float",
+   "label": "Number of Advanced"
+  },
+  {
+   "depends_on": "eval:doc.advanced&&doc.type_of_payment==\"Advanced\"",
+   "fieldname": "number_of_months_period",
+   "fieldtype": "Float",
+   "label": "Number of Months Period"
+  },
+  {
+   "depends_on": "eval:doc.payment_installment&&doc.type_of_payment==\"Installment\"",
+   "fieldname": "number_of_installments",
+   "fieldtype": "Float",
+   "label": "Number of Installments "
+  },
+  {
+   "fieldname": "share_amount",
+   "fieldtype": "Currency",
+   "label": "Share Amount"
+  },
+  {
+   "fieldname": "amount_gps",
+   "fieldtype": "Currency",
+   "label": "Amount Gps"
+  },
+  {
+   "fieldname": "amount_garage",
+   "fieldtype": "Currency",
+   "label": "Amount Garage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-16 10:29:34.149563",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Customer Installment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

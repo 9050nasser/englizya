@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-12 13:09:27.378672",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amount",
+  "customers_share_in_the_car",
+  "monthly_share_amount",
+  "monthly_installment_amount",
+  "subscription_amount_gps",
+  "monthly_garage_rental_amount",
+  "garage_room_rental_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "customers_share_in_the_car",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Customer's Share In The Car"
+  },
+  {
+   "fieldname": "monthly_share_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Share Amount"
+  },
+  {
+   "fieldname": "monthly_installment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Installment Amount"
+  },
+  {
+   "fieldname": "subscription_amount_gps",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Subscription Amount GPS"
+  },
+  {
+   "fieldname": "monthly_garage_rental_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Garage Rental Amount"
+  },
+  {
+   "fieldname": "garage_room_rental_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Garage Room Rental Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-26 12:41:49.328708",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Description",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

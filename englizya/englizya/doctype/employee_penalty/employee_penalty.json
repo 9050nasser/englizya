@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EP-.#####",
+ "creation": "2024-10-13 11:29:08.030923",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yqjf",
+  "penalty_date",
+  "employee",
+  "column_break_dkxm",
+  "penalty_no",
+  "reporter",
+  "is_discounted",
+  "section_break_odsm",
+  "penalty_amount",
+  "old_amount",
+  "column_break_wfqb",
+  "salary_component",
+  "is_a_term_penalty",
+  "section_break_aryy",
+  "repayment_method",
+  "payment_start_date",
+  "column_break_doxt",
+  "repayment_period_in_months",
+  "monthly_repayment_amount",
+  "section_break_sses",
+  "reason",
+  "column_break_vwuq",
+  "notes",
+  "amended_from",
+  "section_break_picn",
+  "table_dahi"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yqjf",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "penalty_date",
+   "fieldtype": "Date",
+   "label": "Penalty Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dkxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_no",
+   "fieldtype": "Int",
+   "label": "Penalty No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reporter",
+   "fieldtype": "Link",
+   "label": "Reporter",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_odsm",
+   "fieldtype": "Section Break",
+   "label": "Penalty Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Penalty Amount",
+   "read_only_depends_on": "eval:doc.docstatus!=0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wfqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "label": "Salary Component",
+   "link_filters": "[[\"Salary Component\",\"type\",\"=\",\"Deduction\"]]",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_sses",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vwuq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Penalty",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_a_term_penalty",
+   "fieldtype": "Check",
+   "label": "Is a Term Penalty"
+  },
+  {
+   "fieldname": "section_break_aryy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.is_a_term_penalty == 1",
+   "fieldname": "repayment_method",
+   "fieldtype": "Select",
+   "label": "Repayment Method",
+   "options": "Repay Fixed Amount per Period\nRepay Over Number of Periods"
+  },
+  {
+   "fieldname": "column_break_doxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.repayment_method==\"Repay Over Number of Periods\"",
+   "fieldname": "repayment_period_in_months",
+   "fieldtype": "Int",
+   "label": "Repayment Period in Months"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.repayment_method==\"Repay Fixed Amount per Period\" && doc.is_a_term_penalty\r\n",
+   "fieldname": "monthly_repayment_amount",
+   "fieldtype": "Currency",
+   "label": "Monthly Repayment Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "section_break_picn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "table_dahi",
+   "fieldtype": "Table",
+   "options": "Penalty Schedule"
+  },
+  {
+   "depends_on": "eval: doc.is_a_term_penalty == 1",
+   "fieldname": "payment_start_date",
+   "fieldtype": "Date",
+   "label": "Payment Start Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_discounted",
+   "fieldtype": "Check",
+   "label": "Is Discounted"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "old_amount",
+   "fieldtype": "Currency",
+   "label": "Old Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-09 16:34:54.484463",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Employee Penalty",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

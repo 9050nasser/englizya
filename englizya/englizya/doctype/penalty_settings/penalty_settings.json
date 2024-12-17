@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-25 15:04:27.749337",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_drivers_deductions",
+  "section_break_pfek",
+  "table_uean"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_drivers_deductions",
+   "fieldtype": "Check",
+   "label": "Enable Drivers Deductions"
+  },
+  {
+   "depends_on": "eval:doc.enable_drivers_deductions == 1",
+   "fieldname": "table_uean",
+   "fieldtype": "Table",
+   "label": "Deduction Rule",
+   "options": "Penalty Setting Table"
+  },
+  {
+   "fieldname": "section_break_pfek",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-25 15:13:25.497085",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Penalty Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

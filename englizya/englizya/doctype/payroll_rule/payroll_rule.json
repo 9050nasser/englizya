@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:route",
+ "creation": "2024-10-22 10:38:45.091680",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_llov",
+  "route",
+  "amended_from",
+  "column_break_ibig",
+  "payroll_calculation",
+  "fixed_salary_per_month",
+  "fixed_salary_component",
+  "section_break_ezyy",
+  "table_baug",
+  "regularity_section",
+  "fixed_same_bus_bonus",
+  "column_break_rdho",
+  "same_bus_salary_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_llov",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Route",
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payroll Rule",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ibig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payroll_calculation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payroll Calculation",
+   "options": "Percentage\nFixed Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ezyy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_baug",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Payroll Rule Route"
+  },
+  {
+   "fieldname": "regularity_section",
+   "fieldtype": "Section Break",
+   "label": "Regularity"
+  },
+  {
+   "fieldname": "fixed_same_bus_bonus",
+   "fieldtype": "Currency",
+   "label": "Fixed Same Bus Bonus"
+  },
+  {
+   "fieldname": "column_break_rdho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "same_bus_salary_component",
+   "fieldtype": "Link",
+   "label": "Same Bus Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "fixed_salary_per_month",
+   "fieldtype": "Currency",
+   "label": "Fixed Salary Per Month"
+  },
+  {
+   "fieldname": "fixed_salary_component",
+   "fieldtype": "Link",
+   "label": "Fixed Salary Component",
+   "options": "Salary Component"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-11 09:16:21.547437",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Payroll Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
