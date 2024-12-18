@@ -1,0 +1,105 @@
+{
+ "_comments": "[{\"comment\": \"Action Failed<br><br><pre><code>Traceback (most recent call last):\\n  File \\\"apps/frappe/frappe/mod...\", \"by\": \"mahmoud@impact.eg\", \"name\": \"g6badn3hkj\"}, {\"comment\": \"Action Failed<br><br><pre><code>Traceback (most recent call last):\\n  File \\\"apps/frappe/frappe/mod...\", \"by\": \"mahmoud@impact.eg\", \"name\": \"gadqej0sgb\"}]",
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 22:16:47.447347",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zj42",
+  "amended_from",
+  "technician_name",
+  "next_maintenance_date",
+  "quantity_used",
+  "column_break_qlqi",
+  "maintenance_date",
+  "site",
+  "spare_parts",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zj42",
+   "fieldtype": "Section Break",
+   "label": "Maintenance schedule"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Periodic Maintenance 1",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "technician_name",
+   "fieldtype": "Link",
+   "label": "Technician Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next maintenance date"
+  },
+  {
+   "fieldname": "quantity_used",
+   "fieldtype": "Int",
+   "label": "Quantity used"
+  },
+  {
+   "fieldname": "column_break_qlqi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_date",
+   "fieldtype": "Date",
+   "label": "Maintenance date"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "spare_parts",
+   "fieldtype": "Link",
+   "label": "Spare parts",
+   "options": "Item"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-18 15:39:44.579593",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Periodic Maintenance 1",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,61 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"kCbJN3RWJA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">customers</span>\",\"col\":12}},{\"id\":\"eJgdyBotJq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle\",\"col\":3}},{\"id\":\"GVcTU56CLy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"keA0nejbjc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Installment Vehicle\",\"col\":3}},{\"id\":\"nXhvUgw8vT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sahre Amount Payment Due\",\"col\":3}}]",
+ "creation": "2024-12-02 18:14:50.838571",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-monthly-rank",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "customers",
+ "links": [],
+ "modified": "2024-12-18 15:35:42.356612",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "customers",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Home",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 36.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle",
+   "link_to": "Vehicle",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sahre Amount Payment Due",
+   "link_to": "Sahre Amount Payment Due",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Installment Vehicle",
+   "link_to": "Installment Vehicle",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "customers"
+}

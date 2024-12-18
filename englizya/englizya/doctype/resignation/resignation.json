@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RS-001..title field",
+ "creation": "2024-10-10 15:14:01.087179",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "date",
+  "date_the_paper_was_received",
+  "visa_delivery",
+  "delivery_of_the_uniform",
+  "\u0633_6",
+  "the_trust",
+  "column_break_ptcr",
+  "reason_for_leaving_the_job",
+  "line",
+  "small_text_aigd"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "date_the_paper_was_received",
+   "fieldtype": "Date",
+   "label": "Date the paper was received"
+  },
+  {
+   "default": "0",
+   "fieldname": "visa_delivery",
+   "fieldtype": "Check",
+   "label": "Visa delivery"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_of_the_uniform",
+   "fieldtype": "Check",
+   "label": "Delivery of the uniform"
+  },
+  {
+   "default": "0",
+   "fieldname": "\u0633_6",
+   "fieldtype": "Check",
+   "label": "\u0633 6"
+  },
+  {
+   "default": "0",
+   "fieldname": "the_trust",
+   "fieldtype": "Check",
+   "label": "The trust"
+  },
+  {
+   "fieldname": "column_break_ptcr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason_for_leaving_the_job",
+   "fieldtype": "Link",
+   "label": " Reason for leaving the job",
+   "options": "Resignation Reason"
+  },
+  {
+   "fieldname": "line",
+   "fieldtype": "Data",
+   "label": "Line"
+  },
+  {
+   "fieldname": "small_text_aigd",
+   "fieldtype": "Small Text",
+   "label": "comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-18 15:39:45.851259",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Resignation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

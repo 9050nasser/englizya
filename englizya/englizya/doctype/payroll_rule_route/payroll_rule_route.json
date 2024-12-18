@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-22 10:53:45.871108",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shift_type",
+  "column_break_hkko",
+  "fixed_salary_per_month",
+  "fixed_salary_component",
+  "daily_target_calculations_section",
+  "from_daily_revenue_target",
+  "daily_percentage",
+  "fixed_end_of_month_amount",
+  "column_break_mcmo",
+  "to_daily_revenue_target",
+  "daily_fixed_amount",
+  "daily_salary_component",
+  "column_break_judi",
+  "daily_ticket_sales_count",
+  "daily_percentage_end_of_month_amount",
+  "daily_end_of_month_salary_component",
+  "monthly_target_calculations_section",
+  "monthly_target",
+  "column_break_wxuv",
+  "monthly_percentage_",
+  "column_break_ojhr",
+  "monthly_fixed_amount",
+  "monthly_salary_component",
+  "regularity_section",
+  "column_break_qodf",
+  "fixed_attendance_bonus",
+  "column_break_wrwo",
+  "column_break_gccj",
+  "regularity_salary_component",
+  "extra_target_section",
+  "extra_ticket_target_amount",
+  "column_break_glxy",
+  "extra_ticket_sales_count",
+  "column_break_mgwa",
+  "daily_extra_ticket_bonus__percentage",
+  "extra_salary_component",
+  "elite_target_section",
+  "elite_ticket_target_amount",
+  "column_break_dkeg",
+  "elite_ticket_sales_count",
+  "column_break_lywr",
+  "daily_elite_ticket_bonus_amount",
+  "elite_salary_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "shift_type",
+   "fieldtype": "Link",
+   "label": "Shift Type",
+   "options": "Shift Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hkko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fixed_salary_per_month",
+   "fieldtype": "Currency",
+   "label": "Fixed Salary Per Month"
+  },
+  {
+   "fieldname": "fixed_salary_component",
+   "fieldtype": "Link",
+   "label": "Fixed Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "daily_target_calculations_section",
+   "fieldtype": "Section Break",
+   "label": "Daily Target Calculations"
+  },
+  {
+   "fieldname": "from_daily_revenue_target",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "From Daily Revenue Target"
+  },
+  {
+   "fieldname": "daily_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Daily Percentage",
+   "mandatory_depends_on": "eval:parent.payroll_calculation == \"Percentage\""
+  },
+  {
+   "fieldname": "fixed_end_of_month_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fixed End of Month Amount",
+   "mandatory_depends_on": "eval:parent.payroll_calculation == \"Fixed Amount\""
+  },
+  {
+   "fieldname": "column_break_mcmo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_daily_revenue_target",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "To Daily Revenue Target"
+  },
+  {
+   "fieldname": "daily_fixed_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Daily Fixed Amount",
+   "mandatory_depends_on": "eval:parent.payroll_calculation == \"Fixed Amount\""
+  },
+  {
+   "fieldname": "daily_salary_component",
+   "fieldtype": "Link",
+   "label": "Daily Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "column_break_judi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_ticket_sales_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Daily Ticket Sales Count"
+  },
+  {
+   "fieldname": "daily_percentage_end_of_month_amount",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Daily Percentage End of Month Amount",
+   "mandatory_depends_on": "eval:parent.payroll_calculation == \"Percentage\""
+  },
+  {
+   "fieldname": "daily_end_of_month_salary_component",
+   "fieldtype": "Link",
+   "label": "Daily End Of Month Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "monthly_target_calculations_section",
+   "fieldtype": "Section Break",
+   "label": "Monthly Target Calculations"
+  },
+  {
+   "fieldname": "monthly_target",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Target"
+  },
+  {
+   "fieldname": "column_break_wxuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_percentage_",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Monthly Percentage %"
+  },
+  {
+   "fieldname": "column_break_ojhr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_fixed_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Fixed Amount"
+  },
+  {
+   "fieldname": "monthly_salary_component",
+   "fieldtype": "Link",
+   "label": "Monthly Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "regularity_section",
+   "fieldtype": "Section Break",
+   "label": "Regularity"
+  },
+  {
+   "fieldname": "column_break_qodf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fixed_attendance_bonus",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fixed Attendance Bonus"
+  },
+  {
+   "fieldname": "column_break_wrwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gccj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "regularity_salary_component",
+   "fieldtype": "Link",
+   "label": "Regularity Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "extra_target_section",
+   "fieldtype": "Section Break",
+   "label": "Extra Target"
+  },
+  {
+   "fieldname": "extra_ticket_target_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Extra Ticket Target Amount"
+  },
+  {
+   "fieldname": "column_break_glxy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extra_ticket_sales_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Extra Ticket Sales Count"
+  },
+  {
+   "fieldname": "column_break_mgwa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_extra_ticket_bonus__percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Daily Extra Ticket Bonus  Percentage"
+  },
+  {
+   "fieldname": "extra_salary_component",
+   "fieldtype": "Link",
+   "label": "Extra Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "elite_target_section",
+   "fieldtype": "Section Break",
+   "label": "Elite Target "
+  },
+  {
+   "fieldname": "elite_ticket_target_amount",
+   "fieldtype": "Currency",
+   "label": "Elite Ticket Target Amount"
+  },
+  {
+   "fieldname": "column_break_dkeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "elite_ticket_sales_count",
+   "fieldtype": "Int",
+   "label": "Elite Ticket Sales Count"
+  },
+  {
+   "fieldname": "column_break_lywr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_elite_ticket_bonus_amount",
+   "fieldtype": "Currency",
+   "label": "Daily Elite Ticket Bonus Amount "
+  },
+  {
+   "fieldname": "elite_salary_component",
+   "fieldtype": "Link",
+   "label": "Elite Salary Component",
+   "options": "Salary Component"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-18 15:38:45.747580",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Payroll Rule Route",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

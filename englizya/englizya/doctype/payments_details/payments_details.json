@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-15 22:40:19.591895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "type_of_payment",
+  "payment_installment",
+  "advanced",
+  "number_of_advanced",
+  "number_of_months_period",
+  "number_of_installments",
+  "amount",
+  "share_amount",
+  "percent"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "type_of_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type Of Payment",
+   "options": "\nCash\nAdvanced\nInstallment"
+  },
+  {
+   "fieldname": "payment_installment",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Installment"
+  },
+  {
+   "fieldname": "advanced",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "number_of_advanced",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Number of Advanced"
+  },
+  {
+   "fieldname": "number_of_months_period",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Number of Months Period"
+  },
+  {
+   "fieldname": "number_of_installments",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Number of Installments "
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "share_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Share Amount"
+  },
+  {
+   "fieldname": "percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-18 15:36:57.995237",
+ "modified_by": "Administrator",
+ "module": "Englizya",
+ "name": "Payments Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
